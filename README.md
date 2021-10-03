@@ -8,7 +8,7 @@
 - `docker-compose up` for quickly setting up db, Or Setup manually.
 - set `GOOGLE_MAP_API_KEY` as an os environment variable (`export GOOGLE_MAP_API_KEY=".."` for linux/mac) 
 - `flask run` to start.
-- To test API: [Geocoding API.postman_collection](Geocoding API.postman_collection.json)
+- To test API: [Geocoding API postman_collection](/Geocoding API.postman_collection.json)
 ## Approach
 
 - API performance is improved and cost reduced by caching, lat, long and addresses. Redis can be used here, but as we need to persist data, NoSQL MongoDB seems a better solution.
