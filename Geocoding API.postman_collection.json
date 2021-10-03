@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "ee014179-8920-41ba-b05a-35b3893f706b",
+		"name": "Geocoding API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAddressDetails",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Charsetc",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "mime",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": \"Appolo hospital, Saras Baug Rd, opp. Sanas Play Ground, Pune, Maharashtra\",\n    \"output_format\": \"xml\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/getAddressDetails/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getAddressDetails",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

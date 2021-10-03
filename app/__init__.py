@@ -6,7 +6,7 @@ from flask_pymongo import PyMongo
 from .config import configs
 
 env = os.environ.get("FLASK_ENV", "development")
-db = PyMongo()
+mongo = PyMongo()
 rest_api = Api()
 gmaps = googlemaps.Client(key=configs[env].GOOGLE_MAP_API_KEY)
 
@@ -19,6 +19,7 @@ def create_app(test_config=None):
 
 
 def register_extensions(app):
-    db.init_app(app)
+    mongo.init_app(app)
     rest_api.init_app(app)
-    import app.routes  # set url routes
+
+import app.routes  # set url routes
